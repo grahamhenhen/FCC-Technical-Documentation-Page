@@ -1,6 +1,5 @@
 <!DOCTYPE>
 <html>
-
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <!--NAVBAR BEGINS-->
@@ -41,12 +40,7 @@
     <div class="nav-link2">
     <a class="nav-link" 
        href="#Writing_Docstrings">Writing Docstrings</a></div>
-    
-     <li><a class="nav-link" 
-           href="#Introduction4">Introduction4</a></li>
-    
-    <li><a class="nav-link" 
-           href="#Introduction5">Introduction5</a></li>
+   
   </ul>
 </nav>
   <!--NAVBAR ENDS--> 
@@ -55,7 +49,7 @@
   <main id="main-doc">
   <section class="main-section" 
            id="Project_Documentation">
-    <h2>Project Documentation<a class="headerlink" href="#project-documentation" title="Permalink to this headline"></a></h2>
+    <header><strong>Project Documentation</strong><a href="#project-documentation"></a></header>
 <p>A <code class="file docutils literal notranslate"><span class="pre">README</span></code> file at the root directory should give general information
 to both users and maintainers of a project. It should be raw text or
 written in some very easy to read markup, such as <a class="reference internal" href="#restructuredtext-ref"><span class="std std-ref">reStructuredText</span></a>
@@ -80,8 +74,9 @@ overview of the changes in the code base for the latest versions.</p>
     
     <section class="main-section"
              id="Project_Publication">
-      
-      <h2>Project Publication<a class="headerlink" href="#project-publication" title="Permalink to this headline"></a></h2>
+      <header><strong>Project Publication</strong>
+        <a href="#project-publication" 
+           title="Permalink to this headline"></a></header>
 <p>Depending on the project, your documentation might include some or all
 of the following components:</p>
 <ul class="simple">
@@ -101,61 +96,184 @@ include code convention and general design strategy of the project.</li>
       
       <section class="main-section"
                id="Sphinx">
-        <header>Sphinx</header>
-        <li><p></p></li>
-        <p></p>
-        <p></p>
-        <code></code>
+        <header><strong>Sphinx</strong></header>
+        
+<span id="sphinx-ref"></span><a class="headerlink" href="#sphinx" title="Permalink to this headline"></a>
+<p><a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> is far and away the most popular Python documentation
+tool. <strong>Use it.</strong>  It converts <a class="reference internal" href="#restructuredtext-ref"><span class="std std-ref">reStructuredText</span></a> markup language
+into a range of output formats including HTML, LaTeX (for printable
+PDF versions), manual pages, and plain text.</p>
+<p>There is also <strong>great</strong>, <strong>free</strong> hosting for your <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> docs:
+<a class="reference external" href="http://readthedocs.org">Read The Docs.</a> Use it. You can configure it with commit hooks to
+your source repository so that rebuilding your documentation will
+happen automatically.</p>
+<p>When run, <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> will import your code and using Python’s introspection
+features it will extract all function, method, and class signatures. It will
+also extract the accompanying docstrings, and compile it all into well
+structured and easily readable documentation for your project.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sphinx is famous for its API generation, but it also works well
+for general project documentation. This Guide is built with
+<a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> and is hosted on <a class="reference external" href="http://readthedocs.org">Read The Docs.</a></p>
+</div>
+</div>
+    
         
         <section class="main-section"
                  id="restructured_text">
-          <header>reStructured Text</header>
-          <li></li>
-          <p></p>
+          <header><strong>reStructured Text</strong></header>
+          <span id="restructuredtext-ref"></span>
+          <a href="#restructuredtext"></a><p>Most Python documentation is written with<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>. It’s like
+Markdown, but with all the optional extensions built in.</p>
+<p>The <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText Primer</a> and the <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText Quick
+Reference</a> should help you familiarize yourself with its syntax.</p>
+</div>
           <p></p>
           <code></code>
           
           <section class="main-section" 
                    id="Code_Documentation_Advice">
-            <header>Code Documentation Advice</header>
-            <li></li>
-            <p></p>
+            <header><strong>Code Documentation Advice</strong></header>
+          
+<p>Comments clarify the code and they are added with purpose of making the
+code easier to understand. In Python, comments begin with a hash
+(number sign) (<code class="docutils literal notranslate"><span class="pre">#</span></code>).</p>
+<p id="docstring-ref">In Python, <em>docstrings</em> describe modules, classes, and functions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square_and_rooter</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the square root of self times self.&quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</pre></div>
+  
+<p>In general, follow the comment section of <span class="target" id="index-0"></span><a href="https://www.python.org/dev/peps/pep-0008#comments"><strong>PEP 8#comments</strong></a> (the “Python Style
+Guide”). More information about docstrings can be found at <span class="target" id="index-1"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0257#specification"><strong>PEP 0257#specification</strong></a> (The Docstring Conventions Guide).</p>
+            
+            
+    
             <code></code>
             
-             <section class="main-section" 
-                   id="Commenting_Sections_of_Code">
-            <header>Commenting Sections of Code</header>
-            <li></li>
-            <p></p>
+        <section class="main-section" 
+                 id="Commenting_Sections_of_Code">
+     <header><strong>Commenting Sections of Code</strong></header>
+            <p><em>Do not use triple-quote strings to comment code</em>. This is not a good
+practice, because line-oriented command-line tools such as grep will
+not be aware that the commented code is inactive. It is better to add
+hashes at the proper indentation level for every commented line. Your
+editor probably has the ability to do this easily, and it is worth
+learning the comment/uncomment toggle.</p>
             <code></code>
                
                 <section class="main-section" 
                    id="Docstrings_and_Magic">
-            <header>Docstrings and Magic</header>
-            <li></li>
-            <p></p>
+                  <header><strong>Docstrings and Magic</strong></header>
+            <p>Some tools use docstrings to embed more-than-documentation behavior,
+such as unit test logic. Those can be nice, but you won’t ever go
+wrong with vanilla “here’s what this does.”</p>
+<p>Tools like <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> will parse your docstrings as reStructuredText and render it
+correctly as HTML. This makes it very easy to embed snippets of example code in
+a project’s documentation.</p>
+<p>Additionally, <a class="reference external" href="https://docs.python.org/3/library/doctest.html">Doctest</a> will read all embedded docstrings that look like input
+from the Python commandline (prefixed with “&gt;&gt;&gt;”) and run them, checking to see
+if the output of the command matches the text on the following line. This
+allows developers to embed real examples and usage of functions alongside
+their source code. As a side effect, it also ensures that their code is
+tested and works.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; my_function(2, 3)</span>
+<span class="sd">    6</span>
+<span class="sd">    &gt;&gt;&gt; my_function(&#39;a&#39;, 3)</span>
+<span class="sd">    &#39;aaa&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+</pre></div>
+</div>
             <code></code>
                   
-                   <section class="main-section" 
+              </p>     
+          <section class="main-section" 
                    id="Docstrings_versus_Block_comments">
-            <header>Docstrings versus Block comments</header>
-            <li></li>
-            <p></p>
+            <header><strong>Docstrings versus Block comments</strong></header>
+            <p>These aren’t interchangeable. For a function or class, the leading
+comment block is a programmer’s note. The docstring describes the
+<em>operation</em> of the function or class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This function slows down program execution for some reason.</span>
+<span class="k">def</span> <span class="nf">square_and_rooter</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns the square root of self times self.&quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Unlike block comments, docstrings are built into the Python language itself.
+This means you can use all of Python’s powerful introspection capabilities to
+access docstrings at runtime, compared with comments which are optimized out.
+Docstrings are accessible from both the <cite>__doc__</cite> dunder attribute for almost
+every Python object, as well as with the built in <cite>help()</cite> function.</p>
+<p>While block comments are usually used to explain <em>what</em> a section of code is
+doing, or the specifics of an algorithm, docstrings are more intended towards
+explaining other users of your code (or you in 6 months time) <em>how</em> a
+particular function can be used and the general purpose of a function, class,
+or module.</p>
             <code></code>
                      
-                      <section class="main-section" 
+          <section class="main-section" 
                    id="Writing_Docstrings">
-            <header>Writing Docstrings</header>
-            <li></li>
-            <p></p>
+   <header><strong>Writing Docstrings</strong></header>
+            <p>Depending on the complexity of the function, method, or class being written, a
+one-line docstring may be perfectly appropriate. These are generally used for
+really obvious cases, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Add two numbers and return the result.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>The docstring should describe the function in a way that is easy to understand.
+For simple cases like trivial functions and classes, simply embedding the
+function’s signature (i.e. <cite>add(a, b) -&gt; result</cite>) in the docstring is
+unnecessary. This is because with Python’s <cite>inspect</cite> module, it is already
+quite easy to find this information if needed, and it is also readily available
+by reading the source code.</p>
+<p>In larger or more complex projects however, it is often a good idea to give
+more information about a function, what it does, any exceptions it may raise,
+what it returns, or relevant details about the parameters.</p>
+<p>For more detailed documentation of code a popular style used, is the one used by the
+NumPy project, often called <a class="reference external" href="http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html">NumPy style</a> docstrings. While it can take up more
+lines than the previous example, it allows the developer to include a lot
+more information about a method, function, or class.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">random_number_generator</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Summary line.</span>
+
+<span class="sd">    Extended description of function.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arg1 : int</span>
+<span class="sd">        Description of arg1</span>
+<span class="sd">    arg2 : str</span>
+<span class="sd">        Description of arg2</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    int</span>
+<span class="sd">        Description of return value</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">42</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/">sphinx.ext.napoleon</a> plugin allows Sphinx to parse this style of
+docstrings, making it easy to incorporate NumPy style docstrings into your
+project.</p>
+<p>At the end of the day, it doesn’t really matter what style is used for writing
+docstrings; their purpose is to serve as documentation for anyone who may need
+to read or make changes to your code. As long as it is correct, understandable,
+and gets the relevant points across then it has done the job it was designed to
+do.</p>
+<p>For further reading on docstrings, feel free to consult <span class="target" id="index-2"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0257"><strong>PEP 257</strong></a></p>
+</div>
             <code></code>
                         
-                         <section class="main-section" 
-                   id="Introduction5">
-            <header>Introduction010</header>
-            <li></li>
-            <p></p>
-            <code></code>
+                        
             
 <!--MAIN SECTION/BODY ENDS--> 
 </html>
