@@ -1,70 +1,162 @@
+<!DOCTYPE>
+<html>
+
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <!--NAVBAR BEGINS-->
 <nav id="navbar">
-  <header>FCC Project</header>
+  <header>Guide to Documenting Python</header>
   <ul>
     <li><a class="nav-link" 
-           href="#Introduction1">Introduction1</a></li>
+           href="#Project_Documentation">Project Documentation</a></li>
     
     <li><a class="nav-link" 
-           href="#Introduction2">Introduction2</a></li>
+           href="#Project_Publication">Project Publication</a></li>
+    <div class="nav-link2">
+        <a class="nav-link" 
+           href="#Sphinx">Sphinx</a></div>
+    
+     <div class="nav-link2">
+        <a class="nav-link" 
+           href="#restructured_text">reStructured Text</a></div>
     
     <li><a class="nav-link" 
-           href="#Introduction3">Introduction3</a></li>
+           href="#Code_Documentation_Advice">Code Documentation Advice</a></li>
     
-    <li><a class="nav-link" 
+    <div class="nav-link2">
+        <a class="nav-link" 
+           href="#Commenting_Sections_of_Code">Commenting Sections of Code</a></li>
+</div>
+  
+  <div class="nav-link2">
+        <a class="nav-link" 
+           href="#Docstrings_and_Magic">Docstrings and Magic</a></li>
+</div>
+
+<div class="nav-link2">
+        <a class="nav-link" 
+      href="#Docstrings_versus_Block_comments">Docstrings versus Block comments</a>
+</div>
+    
+    <div class="nav-link2">
+    <a class="nav-link" 
+       href="#Writing_Docstrings">Writing Docstrings</a></div>
+    
+     <li><a class="nav-link" 
            href="#Introduction4">Introduction4</a></li>
     
     <li><a class="nav-link" 
            href="#Introduction5">Introduction5</a></li>
-          
+  </ul>
 </nav>
   <!--NAVBAR ENDS--> 
-  
   
  <!--MAIN SECTION/BODY BEGINS--> 
   <main id="main-doc">
   <section class="main-section" 
-           id="Introduction1">
-    <header>Introduction1</header>
-    <li></li>
+           id="Project_Documentation">
+    <h2>Project Documentation<a class="headerlink" href="#project-documentation" title="Permalink to this headline"></a></h2>
+<p>A <code class="file docutils literal notranslate"><span class="pre">README</span></code> file at the root directory should give general information
+to both users and maintainers of a project. It should be raw text or
+written in some very easy to read markup, such as <a class="reference internal" href="#restructuredtext-ref"><span class="std std-ref">reStructuredText</span></a>
+or Markdown. It should contain a few lines explaining the purpose of the
+project or library (without assuming the user knows anything about the
+project), the URL of the main source for the software, and some basic credit
+information. This file is the main entry point for readers of the code.</p>
+<p>An <code class="file docutils literal notranslate"><span class="pre">INSTALL</span></code> file is less necessary with Python.  The installation
+instructions are often reduced to one command, such as <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span>
+<span class="pre">module</span></code> or <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code>, and added to the <code class="file docutils literal notranslate"><span class="pre">README</span></code>
+file.</p>
+<p>A <code class="file docutils literal notranslate"><span class="pre">LICENSE</span></code> file should <em>always</em> be present and specify the license
+under which the software is made available to the public.</p>
+<p>A <code class="file docutils literal notranslate"><span class="pre">TODO</span></code> file or a <code class="docutils literal notranslate"><span class="pre">TODO</span></code> section in <code class="file docutils literal notranslate"><span class="pre">README</span></code> should list the
+planned development for the code.</p>
+<p>A <code class="file docutils literal notranslate"><span class="pre">CHANGELOG</span></code> file or section in <code class="file docutils literal notranslate"><span class="pre">README</span></code> should compile a short
+overview of the changes in the code base for the latest versions.</p>
     <p></p>
     <p></p>
     <p></p>
     <code></code>
     
     <section class="main-section"
-             id="Introduction2">
-      <header>Introduction2</header>
-      <li></li>
-      <p></p>
+             id="Project_Publication">
+      
+      <h2>Project Publication<a class="headerlink" href="#project-publication" title="Permalink to this headline"></a></h2>
+<p>Depending on the project, your documentation might include some or all
+of the following components:</p>
+<ul class="simple">
+<li>An <em>introduction</em> should give a very short overview of what can be
+done with the product, using one or two extremely simplified use
+cases. This is the thirty-second pitch for your project.</li>
+<li>A <em>tutorial</em> should show some primary use cases in more detail. The reader
+will follow a step-by-step procedure to set-up a working prototype.</li>
+<li>An <em>API reference</em> is typically generated from the code (see
+<a class="reference internal" href="#docstring-ref"><span class="std std-ref">docstrings</span></a>). It will list all publicly available
+interfaces, parameters, and return values.</li>
+<li><em>Developer documentation</em> is intended for potential contributors. This can
+include code convention and general design strategy of the project.</li>
+</ul>
       <p></p>
       <code></code>
       
       <section class="main-section"
-               id="Introduction3">
-               
-        <header>Introduction3</header>
-        <li></li>
+               id="Sphinx">
+        <header>Sphinx</header>
+        <li><p></p></li>
         <p></p>
         <p></p>
         <code></code>
         
         <section class="main-section"
-                 id="Introduction4">
-          <header>Introduction4</header>
+                 id="restructured_text">
+          <header>reStructured Text</header>
           <li></li>
           <p></p>
           <p></p>
           <code></code>
           
           <section class="main-section" 
+                   id="Code_Documentation_Advice">
+            <header>Code Documentation Advice</header>
+            <li></li>
+            <p></p>
+            <code></code>
+            
+             <section class="main-section" 
+                   id="Commenting_Sections_of_Code">
+            <header>Commenting Sections of Code</header>
+            <li></li>
+            <p></p>
+            <code></code>
+               
+                <section class="main-section" 
+                   id="Docstrings_and_Magic">
+            <header>Docstrings and Magic</header>
+            <li></li>
+            <p></p>
+            <code></code>
+                  
+                   <section class="main-section" 
+                   id="Docstrings_versus_Block_comments">
+            <header>Docstrings versus Block comments</header>
+            <li></li>
+            <p></p>
+            <code></code>
+                     
+                      <section class="main-section" 
+                   id="Writing_Docstrings">
+            <header>Writing Docstrings</header>
+            <li></li>
+            <p></p>
+            <code></code>
+                        
+                         <section class="main-section" 
                    id="Introduction5">
-            <header>Introduction5</header>
+            <header>Introduction010</header>
             <li></li>
             <p></p>
             <code></code>
             
 <!--MAIN SECTION/BODY ENDS--> 
+</html>
             
